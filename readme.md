@@ -2,13 +2,12 @@
 
 - [General info](#general-info)
 - [Technologies](#technologies)
-- [Setup](#setup)
 
 ## General info
 
-You can see this page in its [github page]()
+You can see this page in its [github page](https://fabianfv.github.io/Company-Home-Page/)
 
-This project is a first shot for a insurance fictional web site for desktop and mobile devices. The idea and design were taken from frontend mentor web site.
+This project is the first shot for an insurance fictional website for desktop and mobile devices. The idea and design were taken from the frontend mentor's website.
 This first part is only for desktop and shows some fundamentals of web development:
 
 - HTML semantic tags
@@ -18,7 +17,7 @@ This first part is only for desktop and shows some fundamentals of web developme
 - Responsive units: vw, rem, %
 - Custom properties (css variables)
 - CSS functions: calc, max, var
-- How to reset browser-vendor styles for some html elements, in particular how to get web fonts renders well in webkit/gecko browsers.
+- How to reset browser-vendor styles for some html elements; in particular, how to get web fonts renders well in webkit/gecko based browsers.
 - My try to balance utility first and component first approaches
 - CSS selectors
 - Git / GitHub / GitHub pages
