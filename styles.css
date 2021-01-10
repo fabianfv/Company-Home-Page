@@ -1,0 +1,316 @@
+/*******************
+* Custom properties
+********************/
+
+:root {
+  /* primary colors */
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+
+  /* neutral colors */
+  --darker-violet: hsl(270, 9%, 17%);
+  --darker-grayish-violet: hsl(273, 4%, 51%);
+  --light-gray: #bdbdbd;
+  --lighter-gray: #ececec;
+  --white: #f0f0f0;
+  --gray: #646464;
+  --black: #131313;
+
+  --font-size: 16px;
+  --text-font-family: Karla, sans-serif;
+  --title-font-family: "DM Serif Display", serif;
+
+  --max-width-page: 1440px;
+  --side-padding: 10vw;
+
+  --top-offset: 10vw;
+}
+
+/*******
+* Reset
+********/
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--text-font-family);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  background-color: var(--gray);
+  display: flex;
+  justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--title-font-family);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/****************
+* Component menu
+*******************************************************************
+* Note to my future self.
+*
+* Hey Fabián, how is't going?
+*
+* This could easily be made by using just utility classes. I chose
+* to make it a component because I see the oportunity to reuse it
+* for the main menu and footer menu (social).
+* It should be even easier by using a composition of utility classes
+* to make the component but CSS doesn't have this feature (less
+* pre-processor has it)
+* 
+* Todo:
+*
+* You should check this implementation to improve it (there's room
+* for improvement, for sure)
+*
+* You should implement this alterative using the Less preprocessor
+*
+* You should check Tailwind framework and how to use it with React
+*
+******************************************************************/
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 60%;
+}
+
+.menu__title {
+  font-size: max(0.9rem, 0.8vw);
+  font-family: var(--text-font-family);
+  margin-bottom: 2vw;
+  letter-spacing: 2px;
+}
+
+.menu__item {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: max(0.9rem, 0.8vw);
+  letter-spacing: 2px;
+}
+
+.menu__item--margin-left {
+  margin-left: max(1rem, 1vw);
+}
+
+.menu__item--margin-bottom {
+  margin-bottom: 1vw;
+}
+
+.menu--align-start {
+  align-items: start;
+}
+
+/******************
+* Button component
+*******************/
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  color: inherit;
+  background-color: inherit;
+  width: max-content;
+  letter-spacing: 2px;
+}
+
+/****************
+* Card component
+*****************/
+
+.card {
+  flex: 0 1 30%;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.card__icon {
+  max-width: 30%;
+}
+
+.card__title {
+  font-size: max(1.2rem, 1.8vw);
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.card__text {
+  font-size: max(0.9rem, 0.953vw);
+  color: var(--gray)
+}
+
+.color-gray {
+  color: var(--gray)
+}
+
+/***********
+* Utilities
+************/
+
+.upcase {
+  text-transform: uppercase;
+}
+
+.border-black {
+  border-color: var(--black);
+}
+
+.border-white {
+  border-color: var(--white);
+}
+
+.border-lightgray {
+  border-color: var(--light-gray);
+}
+
+.horizontal-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.font-color-white {
+  color: var(--white);
+}
+
+.font-color-black {
+  color: var(--black);
+}
+
+.side-paddings {
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+}
+
+.full-width {
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+
+  position: relative;
+  width: 100%;
+  left: calc(-1 * var(--side-padding));
+}
+
+/*************
+* Site Styles
+**************/
+
+.main-container {
+  box-sizing: border-box;
+  max-width: var(--max-width-page);
+  background-color: var(--white);
+}
+
+.header {
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-section {
+  background-color: var(--dark-violet);
+  position: relative;
+  width: 100%;
+  left: calc(-1 * var(--side-padding));
+}
+
+.info {
+  width: 50%;
+  justify-content: start;
+  padding-right: 1.5rem;
+}
+
+.horizontal-line {
+  width: 9vw;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-top: var(--top-offset);
+}
+
+.section-title {
+  font-size: max(1.15rem, 4vw);
+  line-height: 1;
+  margin-top: 3vw;
+}
+
+.text {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  font-size: max(0.9rem, 0.953vw);
+}
+
+.family-image {
+  position: relative;
+  top: var(--top-offset);
+  min-width: 150px;
+}
+
+.cards-container {
+  justify-content: space-between;
+}
+
+.more-section {
+  width: 100%;
+  background-color: var(--dark-violet);
+  color: var(--white);
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 3vw 5vw;
+}
+
+.title2 {
+  font-size: max(1rem, 3vw);
+  flex-basis: 50%;
+}
+
+.page-footer {
+  margin-top: 5vw;
+  justify-content: space-between;
+  
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  background-color: var(--lighter-gray);
+}
+
+.footer-header {
+  border-bottom: 1px solid var(--light-gray);
+  margin-bottom: 3vw;
+}
+
+.footer-section {
+  flex-basis: 25%;
+}
+
+.menu-social {
+  font-size: max(1.3rem, 1.8vw);
+  letter-spacing: 5px;
+  color: var(--gray);
+}
