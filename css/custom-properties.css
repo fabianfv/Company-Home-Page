@@ -1,0 +1,23 @@
+:root {
+  /* primary colors */
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+
+  /* neutral colors */
+  --darker-violet: hsl(270, 9%, 17%);
+  --darker-grayish-violet: hsl(273, 4%, 51%);
+  --light-gray: #bdbdbd;
+  --lighter-gray: #ececec;
+  --white: #f0f0f0;
+  --gray: #646464;
+  --black: #131313;
+
+  --font-size: 16px;
+  --text-font-family: Karla, sans-serif;
+  --title-font-family: "DM Serif Display", serif;
+
+  --max-width-page: 1440px;
+  --side-padding: 10vw;
+
+  --top-offset: 6vw;
+}

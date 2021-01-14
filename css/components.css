@@ -1,0 +1,113 @@
+/****************
+* Component menu
+*******************************************************************
+* Note to my future self.
+*
+* Hey Fabián, how is't going?
+*
+* This could easily be made by using just utility classes. I chose
+* to make it a component because I see the oportunity to reuse it
+* for the main menu and footer menu (social).
+*
+* It should be even easier by using a composition of utility classes
+* to make the component but CSS doesn't have this feature (less
+* pre-processor has it). Oh yea babe, code repetition is also a
+* result of the lack of language features!
+* 
+* Todo:
+*
+* D n   You should check this implementation to improve it (there's room
+*  o e  for improvement, for sure)
+*
+* You should implement this using the Less (and Sass?) preprocessor
+*
+* You should check Tailwind framework and how to use it with React
+*
+******************************************************************/
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  text-transform: uppercase;
+  font-size: max(0.9rem, 0.8vw);
+  letter-spacing: 2px;
+}
+
+.menu--horizontal {
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-left: max(1rem, 1vw);
+  color: var(--gray);
+}
+
+.menu--vertical {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 1vw;
+  color: var(--black);
+}
+
+.menu__title {
+  font-size: max(0.9rem, 0.8vw);
+  font-family: var(--text-font-family);
+  margin-bottom: 2vw;
+  letter-spacing: 2px;
+}
+
+.menu__item {
+  text-decoration: none;
+  color: inherit;
+  font:inherit;
+  letter-spacing: inherit;
+  margin: inherit;
+}
+
+/******************
+* Button component
+*******************/
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  color: inherit;
+  background-color: inherit;
+  width: max-content;
+  letter-spacing: inherit;
+}
+
+/****************
+* Card component
+*****************/
+
+.card {
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+}
+
+.card__icon {
+  max-width: 30%;
+}
+
+.card__title {
+  font-size: max(1.6rem, 1.6vw);
+  font-weight: 600;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.card__text {
+  font-size: max(0.9rem, 0.953vw);
+  color: var(--gray);
+  line-height: 1.8;
+}

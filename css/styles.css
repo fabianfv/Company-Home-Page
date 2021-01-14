@@ -1,0 +1,75 @@
+/*
+* Not a good a idea for big websites 'cause each import causes an additional
+* and blocking http request
+*/
+
+@import 'reset.css';
+@import 'custom-properties.css';
+@import 'utilities.css';
+@import 'components.css';
+
+/*************
+* Site Styles
+**************/
+
+.side-paddings {
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+}
+
+.full-width {
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+
+  position: relative;
+  width: 100%;
+  left: calc(-1 * var(--side-padding));
+}
+
+.main-container {
+  box-sizing: border-box;
+  max-width: var(--max-width-page);
+  background-color: var(--white);
+}
+
+.header {
+  height: 4rem;
+  align-items: center;
+}
+
+.intro-section {
+  position: relative;
+  width: 100%;
+  left: calc(-1 * var(--side-padding));
+}
+
+.info {
+  width: 50%;
+  padding-right: 1.5rem;
+  margin: var(--top-offset) 0;
+}
+
+.horizontal-line {
+  width: 9vw;
+}
+
+.family-image {
+  position: absolute;
+  top: var(--top-offset);
+  min-width: 150px;
+}
+
+.we-section {
+  margin-top: 18vw;
+  margin-bottom: var(--top-offset);
+}
+
+.more-section {
+  box-sizing: border-box;
+  padding: 4vw 5vw;
+}
+
+.page-footer {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
